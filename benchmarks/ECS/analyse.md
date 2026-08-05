@@ -1,0 +1,4 @@
+# ECS ANALYSE BENCHMARKS
+- Le wrapper Entity sous-performe pour une raison inconnue : temps quasiment doublés. Ce n'est pas si grave car le wrapper n'est pas sensé être utilisé intensément dans des systèmes critiques. A privilégier dans la logique générale plus haut niveau.
+- Dans view lorsque les données sont fragmentées on perd drastiquement en performance surtout a partir de 1'000'000 d'entités. Si nécessaire on pourrait réordonner les données par rapport aux ids lorsque c'est trop désordonné (à définir). Une autre piste associer les données qui collaborent comme Position/Velocité/Acceleration pour qu'ils soient alignés (cf. différence de performance entre aligned et fragmented).
+- Remarquer que les autres fonctions ont une croissance quasi linéaire O(n) comme attendu.

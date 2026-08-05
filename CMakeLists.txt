@@ -17,5 +17,5 @@ add_subdirectory(tests)
 # generate targets for benchmarks
 add_subdirectory(benchmarks)
 
-## generate targets for documentation
-#add_subdirectory(doc)
+# generate targets for documentation
+add_subdirectory(doc)
