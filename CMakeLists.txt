@@ -10,12 +10,12 @@ find_package(SDL3 CONFIG REQUIRED)
 
 add_subdirectory(src)
 #add_subdirectory(sandbox)
-#
+
 # generate targets for testings
 add_subdirectory(tests)
 
-## generate targets for benchmarks
-#add_subdirectory(benchmarks)
+# generate targets for benchmarks
+add_subdirectory(benchmarks)
 
 ## generate targets for documentation
 #add_subdirectory(doc)
