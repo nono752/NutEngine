@@ -9,7 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(SDL3 CONFIG REQUIRED)
 
 add_subdirectory(src)
-#add_subdirectory(sandbox)
+add_subdirectory(sandbox)
 
 # generate targets for testings
 add_subdirectory(tests)
