@@ -1,0 +1,84 @@
+{
+  "version": 3,
+
+  "cmakeMinimumRequired": 
+  {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+
+  "configurePresets": 
+  [
+    {
+      "name": "vcpkg-base",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": 
+      {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+      }
+    },
+    {
+      "name": "conf-debug",
+      "displayName": "Configuration (Debug)",
+      "inherits": "vcpkg-base",
+      "cacheVariables": 
+      {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "conf-release",
+      "displayName": "Configuration (Release)",
+      "inherits": "vcpkg-base",
+      "cacheVariables": 
+      {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+
+  "buildPresets": 
+  [
+    {
+      "name": "build-debug",
+      "configurePreset": "conf-debug",
+      "configuration": "Debug",
+      "displayName": "Build (Debug)"
+    },
+    {
+      "name": "build-release",
+      "configurePreset": "conf-release",
+      "configuration": "Release",
+      "displayName": "Build (Release)"
+    },
+    {
+      "name": "run",
+      "configurePreset": "conf-debug",
+      "configuration": "Debug",
+      "displayName": "run sandbox",
+      "targets": "run"
+    }
+  ],
+
+  "testPresets": 
+  [
+    {
+      "name": "test-debug",
+      "displayName": "test (Debug)",
+      "configurePreset": "conf-debug",
+      "output": 
+      {
+          "outputOnFailure": true,
+          "verbosity": "verbose"
+      },
+      "execution": 
+      {
+          "noTestsAction": "error",
+          "stopOnFailure": false
+      }
+    }
+  ]
+}
+

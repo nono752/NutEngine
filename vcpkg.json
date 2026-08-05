@@ -1,0 +1,7 @@
+{
+  "dependencies": [
+    "benchmark",
+    "sdl3",
+    "gtest"
+  ]
+}
