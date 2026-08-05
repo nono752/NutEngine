@@ -2,7 +2,7 @@ add_library(Core STATIC
     src/Window.cpp
     src/Renderer.cpp
     src/RendererSDL.cpp
-#    src/Application.cpp
+    src/Application.cpp
 )
 
 target_include_directories(Core 
