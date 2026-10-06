@@ -2,6 +2,9 @@
 - [Prérequis](#prerequis)
 - [Comment modifier NutEngine](#comment-modifier-nutengine)
 
+Un moteur de jeu 2D axé sur les performances, développé en C++ moderne. Le projet s'articule autour d'une architecture Entity-Component-System (ECS) développée sur mesure et applique les principes du Data-Oriented Design.
+Projet en cours, actuellement sur les systems et readme pour le Y un peu bancal (à revoir).
+
 ## Prérequis 
 ### package manager
 On utilise vcpkg pour gérer les dépendences (mode manifest).
@@ -26,7 +29,7 @@ CMake pour le build.
 Pour plus d'informations: `https://cmake.org/getting-started/`
 
 ### code style
-Pour la cohérence du style du code utiliser clang-format.
+TODO: se renseigner sur clang-format
 
 ## Comment modifier NutEngine
 ### configurer cmake
