@@ -12,6 +12,7 @@ add_subdirectory(src)
 add_subdirectory(sandbox)
 
 # generate targets for testings
+enable_testing()
 add_subdirectory(tests)
 
 # generate targets for benchmarks

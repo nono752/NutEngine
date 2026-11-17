@@ -68,6 +68,7 @@
       "name": "test-debug",
       "displayName": "test (Debug)",
       "configurePreset": "conf-debug",
+      "configuration": "Debug",
       "output": 
       {
           "outputOnFailure": true,
