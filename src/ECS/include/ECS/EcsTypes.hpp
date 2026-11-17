@@ -26,6 +26,9 @@ namespace nut
     /** @brief Type représentant la génération/version d'une entité (utilisé pour sécuriser les recyclages). */
     using EntityVersion = uint32_t;
 
+    /** @brief Type représentant un layer du system manager. */
+    using SystemLayerId = size_t;
+
     /** @brief Constante représentant un identifiant d'entité invalide (valeur maximale du uint32_t). */
     constexpr EntityId NULL_ENTITY_ID = std::numeric_limits<EntityId>::max();
 
