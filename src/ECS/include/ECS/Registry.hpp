@@ -77,7 +77,7 @@ namespace nut
              * @internal
              * @return EntityId L'identifiant attribué au prochain type de composant.
              */
-            static EntityId getNextComponentId();
+            static ComponentId getNextComponentId();
 
             /**
              * @brief Récupère (ou instancie dynamiquement si inexistant) le SparseSet associé au type T.

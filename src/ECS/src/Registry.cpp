@@ -5,7 +5,7 @@ namespace nut
 {
     ComponentId Registry::getNextComponentId() 
     {
-        static EntityId nextId = 0;
+        static ComponentId nextId = 0;
         return nextId++;
     }
 
@@ -88,6 +88,7 @@ namespace nut
     void Registry::reserveAll(size_t capacity)
     {
         for (auto& pool : components)
-            pool->reserve(capacity); // reserve is virtual here
+            if (pool)
+                pool->reserve(capacity); // reserve is virtual here
     }
 }

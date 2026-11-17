@@ -286,7 +286,7 @@ namespace nut
 
             /**
              * @brief Itère en retournant des Handles `Entity` orientés objet.
-             * * @return EntityProxy Un objet intermédiaire compatible for-range.
+             * @return EntityProxy Un objet intermédiaire compatible for-range.
              */
             EntityProxy entities() 
             { 

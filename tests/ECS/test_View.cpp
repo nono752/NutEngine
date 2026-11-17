@@ -17,9 +17,9 @@ class ViewTest : public ::testing::Test
 
         void testIteration(std::array<nut::EntityId, 2> ids, const std::string& where)
         {
-            EXPECT_EQ(iterationCount, 2) << "Failed in: " << where;;
-            EXPECT_EQ(registry.getComponent<Health>(ids[0]).hp, 180) << "Failed in: " << where;;
-            EXPECT_EQ(registry.getComponent<Health>(ids[1]).hp, 90) << "Failed in: " << where;;
+            EXPECT_EQ(iterationCount, 2) << "Failed in: " << where;
+            EXPECT_EQ(registry.getComponent<Health>(ids[0]).hp, 180) << "Failed in: " << where;
+            EXPECT_EQ(registry.getComponent<Health>(ids[1]).hp, 90) << "Failed in: " << where;
         }
         void setIteration(std::array<nut::EntityId, 2> ids)
         {
